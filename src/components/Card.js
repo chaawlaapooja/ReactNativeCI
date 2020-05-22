@@ -45,7 +45,7 @@ const styles = {
 };
 
 Card.propTypes = {
-  image: PropTypes.object.isRequired,
+  image: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
   is_favorite: PropTypes.bool.isRequired,
   action: PropTypes.func.isRequired
