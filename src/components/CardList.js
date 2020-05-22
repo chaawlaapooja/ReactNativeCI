@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { View, FlatList } from "react-native";
+import { View, FlatList, ActivityIndicator } from "react-native";
+
+import { FAVORITED_CARD, LOCAL_DATA_REQUEST } from "../actions/types";
 import PropTypes from "prop-types";
 
 import { connect } from "react-redux";
@@ -7,18 +9,25 @@ import { favoritedCard } from "../actions";
 import Card from "./Card";
 
 class CardList extends Component {
+  componentDidMount() {
+      this.props.requestLocalData();
+  }
   render() {
-    return (
-      <View style={styles.container}>
-        <FlatList
-          contentContainerStyle={styles.flatlist}
-          data={this.props.cards}
-          renderItem={this.renderCard}
-          numColumns={2}
-          keyExtractor={(item, index) => item.id.toString()}
-        />
-      </View>
-    );
+        const { fetching, cards } = this.props;
+
+        // add activity indicator (show while fetching data from local storage)
+        return (
+          <View style={styles.container}>
+            <ActivityIndicator size="large" color="#333" animating={fetching} />
+            <FlatList
+              contentContainerStyle={styles.flatlist}
+              data={cards}
+              renderItem={this.renderCard}
+              numColumns={2}
+              keyExtractor={(item, index) => item.id.toString()}
+            />
+          </View>
+        );
   }
 
   renderCard = ({ item }) => {
@@ -48,13 +57,27 @@ CardList.propTypes = {
   favoritedCard: PropTypes.func.isRequired
 };
 
-const mapStateToProps = ({ cards }) => {
-  return cards;
-};
+const mapStateToProps = ({ cards, fetching }) => {
+      return {
+        ...cards,
+        ...fetching
+      };
+    };
 
-export default connect(
-  mapStateToProps,
-  {
-    favoritedCard
-  }
-)(CardList);
+    const mapDispatchToProps = dispatch => {
+      return {
+        // dispatch action instead of returning the object containing the action data
+        favoritedCard: id => {
+          dispatch({ type: FAVORITED_CARD, payload: id });
+        },
+        // add function for dispatching action for initiating local storage data request
+        requestLocalData: () => {
+          dispatch({ type: LOCAL_DATA_REQUEST });
+        }
+      };
+    };
+
+    export default connect(
+      mapStateToProps,
+      mapDispatchToProps
+    )(CardList);

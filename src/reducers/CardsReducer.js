@@ -1,4 +1,7 @@
-import { FAVORITED_CARD } from "../actions/types";
+import { FAVORITED_CARD, LOCAL_DATA_REQUEST,
+      LOCAL_DATA_SUCCESS,
+      LOCAL_DATA_FAILURE } from "../actions/types";
+import store from "react-native-simple-store"; // add this
 
 const INITIAL_STATE = {
   cards: [
@@ -115,16 +118,38 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case FAVORITED_CARD:
-      let cards = state.cards.map(item => {
-        return item.id == action.payload
-          ? { ...item, is_favorite: !item.is_favorite }
-          : item;
-      });
+      case FAVORITED_CARD:
+        let cards = state.cards.map(item => {
+          return item.id == action.payload
+            ? { ...item, is_favorite: !item.is_favorite }
+            : item;
+        });
 
-      return { ...state, cards };
+        // update the local storage with the copy of the new data
+        store.update("app_state", {
+          cards
+        });
 
-    default:
-      return state;
-  }
+        return { ...state, cards };
+
+      // add these:
+      case LOCAL_DATA_REQUEST: // triggered when requesting data from local storage
+        return { ...state, fetching: true };
+
+      case LOCAL_DATA_SUCCESS: // triggered when data is successfully returned from local storage
+        return { ...state, fetching: false, cards: action.cards };
+
+      // only triggered the first time the app is opened because there's no data in the local storage yet
+      case LOCAL_DATA_FAILURE:
+          store.update("app_state", INITIAL_STATE); // initialize the local storage
+          return {
+            ...state,
+            fetching: false,
+            cards: INITIAL_STATE.cards // return the initial state instead
+          };
+
+      default:
+        return state;
+    }
+
 };

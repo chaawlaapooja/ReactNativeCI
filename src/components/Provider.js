@@ -1,12 +1,16 @@
 import React from "react";
 import { ScrollView } from "react-native";
 import { Provider as ReduxProvider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import reducers from "../reducers";
 
 import PropTypes from "prop-types";
 
-const store = createStore(reducers);
+import createSagaMiddleware from "redux-saga";
+import { watcherSaga } from "../sagas";
+const sagaMiddleware = createSagaMiddleware();
+const store = createStore(reducers, applyMiddleware(sagaMiddleware));
+sagaMiddleware.run(watcherSaga);
 
 const Provider = ({ children }) => {
   return (
