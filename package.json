@@ -35,7 +35,7 @@
   "jest": {
     "preset": "react-native",
     "testMatch": [
-      "<rootDir>/__tests__/*"
+      "ReactNativeCI/__tests__/*"
     ]
   },
   "detox": {
