@@ -9,7 +9,7 @@ export default class App extends Component {
   render() {
     return (
       <View>
-        <Header title="ReactNativeCI" />
+        <Header title="ReactNative-CI" />
         <Provider>
           <CardList />
         </Provider>
