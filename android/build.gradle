@@ -10,10 +10,7 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven {
-            url "https://dl.bintray.com/android/android-tools"
-            name 'Google'
-        }
+        
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.2")
