@@ -9,7 +9,8 @@ buildscript {
     }
     repositories {
         google()
-        jcenter()
+        jcenter { url "http://jcenter.bintray.com/"}
+        maven { url "https://dl.bintray.com/android/android-tools" }
     }
     dependencies {
         classpath("com.android.tools.build:gradle:3.5.2")
@@ -34,5 +35,15 @@ allprojects {
         google()
         jcenter()
         maven { url 'https://www.jitpack.io' }
+    }
+}
+subprojects {
+    if (project.name.contains('@react-native-community/async-storage')) {
+        buildscript {
+            repositories {
+                jcenter()
+                maven { url "https://dl.bintray.com/android/android-tools/"  }
+            }
+        }
     }
 }
