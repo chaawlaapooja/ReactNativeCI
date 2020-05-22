@@ -18,7 +18,12 @@ class CardList extends Component {
         // add activity indicator (show while fetching data from local storage)
         return (
           <View style={styles.container}>
-            <ActivityIndicator size="large" color="#333" animating={fetching} />
+            <ActivityIndicator
+              size="large"
+              color="#333"
+              animating={fetching}
+              testID="loader"
+            />
             <FlatList
               contentContainerStyle={styles.flatlist}
               data={cards}

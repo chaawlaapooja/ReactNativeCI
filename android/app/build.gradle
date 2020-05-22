@@ -134,6 +134,11 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        // Detox: start
+        testBuildType System.getProperty('testBuildType', 'debug')
+        missingDimensionStrategy "minReactNative", "minReactNative46"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        // Detox: end
     }
     splits {
         abi {
@@ -141,6 +146,12 @@ android {
             enable enableSeparateBuildPerCPUArchitecture
             universalApk false  // If true, also generate a universal APK
             include "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
+            // Detox: start
+    androidTestImplementation(project(path: ":detox"))
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test:rules:1.0.1'
+    // Detox: end
         }
     }
     signingConfigs {
