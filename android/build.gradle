@@ -6,7 +6,7 @@ buildscript {
         google() // Gradle 3: add this
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0' // Gradle 3: replace existing classpath with this
+        classpath 'com.android.tools.build:gradle:3.3.0' // Gradle 3: replace existing classpath with this
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
