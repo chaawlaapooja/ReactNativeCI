@@ -38,10 +38,10 @@
       "^.+\\.(jpg|jpeg|png)$": "RelativeImageStub"
     },
     "transform": {
-      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/fileTransformer.js"
+      "\\.(jpg|jpeg|png|gif)$": "./fileTransformer.js"
     },
     "testMatch": [
-      "$BITRISE_SOURCE_DIR/__tests__/*"
+      "./__tests__/*"
     ]
   },
   "detox": {
