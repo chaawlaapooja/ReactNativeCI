@@ -41,7 +41,7 @@
       "\\.(jpg|jpeg|png|gif)$": "<rootDir>/fileTransformer.js"
     },
     "testMatch": [
-      "<rootDir>/__tests__/*"
+      "$BITRISE_SOURCE_DIR/__tests__/*"
     ]
   },
   "detox": {
