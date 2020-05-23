@@ -21,4 +21,4 @@ public class DetoxTest {
   public void runDetoxTests() throws InterruptedException {
       Detox.runTests(mActivityRule);
   }
-} 
+}
