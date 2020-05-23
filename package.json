@@ -40,8 +40,9 @@
     "transform": {
       "\\.(jpg|jpeg|png|gif)$": "<rootDir>/fileTransformer.js"
     },
-
-    "testMatch": ["<rootDir>/__tests__/*"]
+    "testMatch": [
+      "<rootDir>/__tests__/*"
+    ]
   },
   "detox": {
     "configurations": {
