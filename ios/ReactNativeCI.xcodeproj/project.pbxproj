@@ -23,10 +23,10 @@
 		53E5DD59F1B248329A9DC57E /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BECD3BFB9D4BA28E90B6BB /* Ionicons.ttf */; };
 		61BB69ECC5224AF8881D44E9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0906DBD95D3A41538484A0A3 /* FontAwesome.ttf */; };
 		6B0F9452C077408594D47F3F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B85FDBD515456F8CB1E7BE /* MaterialCommunityIcons.ttf */; };
-		809185540FFB31273F5DD249 /* libPods-ReactNativeCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1029B7E2C3B715A909DF7B23 /* libPods-ReactNativeCI.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		83B62070E22441AFBDB4669F /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37E42E4692B642E4A47E4620 /* SimpleLineIcons.ttf */; };
 		8922D402D6DD4691A52A0DE4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D0180D9A1C14F629B73BFF4 /* Entypo.ttf */; };
 		96ABE62A05A14A50BDE28F44 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76FC96DF39FC44AB82BAE118 /* AntDesign.ttf */; };
+		A548C1FBA45CA8447E0B3E66 /* libPods-ReactNativeCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1029B7E2C3B715A909DF7B23 /* libPods-ReactNativeCI.a */; };
 		B7E01C3DC7B0ABB768E78027 /* libPods-ReactNativeCI-ReactNativeCITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 350C58D22B24CC3357828652 /* libPods-ReactNativeCI-ReactNativeCITests.a */; };
 		B87BE9AAE99F4C098DB9BEE1 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FE9FAE77B525440BA0FDF707 /* FontAwesome5_Regular.ttf */; };
 		C3057B6A1D75497C9A408681 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6D024F6801945079CB77A20 /* Foundation.ttf */; };
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				809185540FFB31273F5DD249 /* libPods-ReactNativeCI.a in Frameworks */,
+				A548C1FBA45CA8447E0B3E66 /* libPods-ReactNativeCI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,7 +644,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${SRCROOT}/Podfile.lock\" \"${SRCROOT}/Pods/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
