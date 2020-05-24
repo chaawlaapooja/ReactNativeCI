@@ -34,12 +34,6 @@
   },
   "jest": {
     "preset": "react-native",
-    "moduleNameMapper": {
-      "^.+\\.(jpg|jpeg|png)$": "RelativeImageStub"
-    },
-    "transform": {
-      "\\.(jpg|jpeg|png|gif)$": "<rootDir>/fileTransformer.js"
-    },
     "testMatch": [
       "<rootDir>/__tests__/*"
     ]
