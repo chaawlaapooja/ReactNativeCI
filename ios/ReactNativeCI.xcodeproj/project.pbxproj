@@ -20,10 +20,10 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeCITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeCITests.m */; };
-		3FFD4980EE2C96DA4B7C2ECB /* libPods-ReactNativeCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1029B7E2C3B715A909DF7B23 /* libPods-ReactNativeCI.a */; };
 		53E5DD59F1B248329A9DC57E /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BECD3BFB9D4BA28E90B6BB /* Ionicons.ttf */; };
 		61BB69ECC5224AF8881D44E9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0906DBD95D3A41538484A0A3 /* FontAwesome.ttf */; };
 		6B0F9452C077408594D47F3F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B85FDBD515456F8CB1E7BE /* MaterialCommunityIcons.ttf */; };
+		809185540FFB31273F5DD249 /* libPods-ReactNativeCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1029B7E2C3B715A909DF7B23 /* libPods-ReactNativeCI.a */; };
 		83B62070E22441AFBDB4669F /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37E42E4692B642E4A47E4620 /* SimpleLineIcons.ttf */; };
 		8922D402D6DD4691A52A0DE4 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D0180D9A1C14F629B73BFF4 /* Entypo.ttf */; };
 		96ABE62A05A14A50BDE28F44 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76FC96DF39FC44AB82BAE118 /* AntDesign.ttf */; };
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FFD4980EE2C96DA4B7C2ECB /* libPods-ReactNativeCI.a in Frameworks */,
+				809185540FFB31273F5DD249 /* libPods-ReactNativeCI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
