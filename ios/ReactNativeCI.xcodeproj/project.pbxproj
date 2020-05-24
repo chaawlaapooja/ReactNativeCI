@@ -20,6 +20,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeCITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeCITests.m */; };
+		3FFD4980EE2C96DA4B7C2ECB /* libPods-ReactNativeCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1029B7E2C3B715A909DF7B23 /* libPods-ReactNativeCI.a */; };
 		53E5DD59F1B248329A9DC57E /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93BECD3BFB9D4BA28E90B6BB /* Ionicons.ttf */; };
 		61BB69ECC5224AF8881D44E9 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0906DBD95D3A41538484A0A3 /* FontAwesome.ttf */; };
 		6B0F9452C077408594D47F3F /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5B85FDBD515456F8CB1E7BE /* MaterialCommunityIcons.ttf */; };
@@ -33,7 +34,6 @@
 		D580E258208B48519D6C4E5A /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AB494561EA2241E68A0D8C24 /* MaterialIcons.ttf */; };
 		DB8B94F4C8B74E35B3144D96 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 927103DFCBBD420BB97692BB /* Octicons.ttf */; };
 		DBC9D6F78AF6408B824E48F0 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB387726DAFA45549D2D9A10 /* Fontisto.ttf */; };
-		E7725C322E65F9D4BB47589F /* libPods-ReactNativeCI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1029B7E2C3B715A909DF7B23 /* libPods-ReactNativeCI.a */; };
 		FC5D7BDFB6264FCBB5E0F580 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0605D8F3493D488996807182 /* EvilIcons.ttf */; };
 		FE7FC90A7C2041C7AEB99D27 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7ED9492808614C55973C34EB /* FontAwesome5_Solid.ttf */; };
 /* End PBXBuildFile section */
@@ -114,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7725C322E65F9D4BB47589F /* libPods-ReactNativeCI.a in Frameworks */,
+				3FFD4980EE2C96DA4B7C2ECB /* libPods-ReactNativeCI.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
