@@ -808,6 +808,7 @@
 				);
 				INFOPLIST_FILE = ReactNativeCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -833,6 +834,7 @@
 				DEVELOPMENT_TEAM = 5GD4TKKYXT;
 				INFOPLIST_FILE = ReactNativeCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				NEW_SETTING = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
